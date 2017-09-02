@@ -38,7 +38,18 @@
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.8.1",
     "oscarotero/env": "^1.1.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "wpackagist-theme/underscores": "^0.6.5",
+    "wpackagist-plugin/elementor": "^1.7.1",
+    "wpackagist-plugin/wordfence": "^6.3.17",
+    "wpackagist-plugin/google-analytics-for-wordpress": "^6.2.2",
+    "wpackagist-plugin/gravityforms": "^6.3.17",
+    "wpackagist-plugin/zero-spam": "^3.0.6",
+    "wpackagist-plugin/updraftplus": "^1.13.5",
+    "wpackagist-plugin/wp-optimize": "^2.1.1",
+    "wpackagist-plugin/wp-content-copy-protection": "^1.1.8.3",
+    "wpackagist-plugin/wordpress-seo": "^5.3.3",
+    
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
