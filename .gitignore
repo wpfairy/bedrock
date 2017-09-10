@@ -1,14 +1,18 @@
 # Application
 web/app/plugins/*
+web/app/themes/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+web/app/updraft/*
+web/app/wflogs/*
 
 # WordPress
 web/wp
 web/.htaccess
+/**/**/debug.log
 
 # Dotenv
 .env
@@ -18,3 +22,7 @@ web/.htaccess
 # Composer
 vendor/*
 !vendor/.gitkeep
+
+## WPFairy
+/**/**/*schmaltz*
+composer.lock
