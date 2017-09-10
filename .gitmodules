@@ -1,0 +1,6 @@
+[submodule "web/app/themes/schmaltz-theme"]
+	path = web/app/themes/schmaltz-theme
+	url = https://github.com/wpfairy/schmaltz-theme.git
+[submodule "web/app/plugins/plugin-template"]
+	path = web/app/plugins/plugin-template
+	url = https://github.com/wpfairy/plugin-template.git
