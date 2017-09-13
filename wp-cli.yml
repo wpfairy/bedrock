@@ -1,1 +1,74 @@
+# Global parameter defaults
+url: localhost
 path: web/wp
+color: false
+
+# Subcommand defaults (e.g. `wp core config`)
+core config:
+    dbname: wp_schmaltz
+    dbuser: root
+    dbpass: root
+    extra-php: |
+      // Enable WP_DEBUG mode
+      define( 'WP_DEBUG', true );
+
+      // Enable Debug logging to the /wp-content/debug.log file
+      define( 'WP_DEBUG_LOG', true );
+
+      // Disable display of errors and warnings
+      define( 'WP_DEBUG_DISPLAY', true );
+      @ini_set( 'display_errors', 0 );
+
+      // Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
+      define( 'SCRIPT_DEBUG', true );
+      define( 'SAVEQUERIES', true );
+
+core install:
+  title: My First Site
+  url: localhost
+  admin_user: admin
+  admin_password: admin
+  admin_email: admin@schmaltz.io
+
+core multisite-install:
+  title: My First Site
+  url: localhost
+  admin_user: admin
+  admin_password: admin
+  admin_email: admin@schmaltz.io
+  extra-php: |
+      /* Multisite */
+      define( 'WP_ALLOW_MULTISITE', true );
+      define('MULTISITE', true);
+      define('SUBDOMAIN_INSTALL', true);
+      define('DOMAIN_CURRENT_SITE', 'schmaltz.local');
+      define('PATH_CURRENT_SITE', '/');
+      define('SITE_ID_CURRENT_SITE', 1);
+      define('BLOG_ID_CURRENT_SITE', 1);
+
+      // Enable WP_DEBUG mode
+      define( 'WP_DEBUG', true );
+
+      // Enable Debug logging to the /wp-content/debug.log file
+      define( 'WP_DEBUG_LOG', true );
+
+      // Disable display of errors and warnings
+      define( 'WP_DEBUG_DISPLAY', true );
+      @ini_set( 'display_errors', 0 );
+
+      // Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
+      define( 'SCRIPT_DEBUG', true );
+      define( 'SAVEQUERIES', true );
+
+theme install:
+  _: []
+  activate: true
+
+plugin install:
+  _: []
+  activate: true
+
+# '_' is a special value denoting configuration options for this wp-cli.yml
+_:
+    # Merge subcommand defaults from the upstream config.yml, instead of overriding
+    merge: true
